@@ -1,0 +1,221 @@
+/* Container for the whole quiz page */
+.quiz-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: #f0f4f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Instructions section */
+.instructions {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: slideIn 0.5s forwards;
+}
+
+.instructions h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #004d99;
+}
+
+.instructions ul {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.instructions ul li {
+    font-size: 1.1em;
+}
+
+.instructions button {
+    background-color: #004d99;
+    color: white;
+    font-size: 1.2em;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.instructions button:hover {
+    background-color: #003366;
+}
+
+/* Question section */
+.question-section {
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.question-section h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #004d99;
+}
+
+.question-section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.options-list {
+    list-style: none;
+    padding: 0;
+}
+
+.option-item {
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.option-item:hover {
+    transform: scale(1.05);
+}
+
+.option-item input {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.option-item label {
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.option-item input:checked + label {
+    color: #004d99;
+}
+
+.integer-input {
+    width: 100px;
+    padding: 10px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.integer-input:focus {
+    border-color: #004d99;
+    outline: none;
+}
+
+.timer {
+    font-size: 1.5em;
+    color: #e74c3c;
+    margin-bottom: 20px;
+}
+
+/* Next button */
+.next-button {
+    background-color: #004d99;
+    color: white;
+    font-size: 1.2em;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    opacity: 0.9;
+}
+
+.next-button:hover {
+    background-color: #003366;
+    transform: translateY(-2px);
+}
+
+.next-button:disabled {
+    background-color: #bbb;
+    cursor: not-allowed;
+}
+
+/* Scoreboard styles */
+.scoreboard-container {
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    margin-top: 30px;
+}
+
+.scoreboard-container h2 {
+    font-size: 2em;
+    color: #004d99;
+    margin-bottom: 15px;
+}
+
+.scoreboard-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.scoreboard-container li {
+    font-size: 1.1em;
+    margin: 8px 0;
+    padding: 12px;
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    border-left: 5px solid #004d99;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Highlighted Latest Attempt */
+.scoreboard-container li.latest-attempt {
+    background-color: #e3f2fd; /* Light blue background for latest attempt */
+    border-left-color: #2196f3;
+}
+
+/* Hover effect on history items */
+.scoreboard-container li:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.02);
+}
+
+/* Completed Status */
+.completed-status {
+    color: green;
+    font-weight: bold;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
